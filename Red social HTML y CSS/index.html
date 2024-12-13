@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registros</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header id="logo">
+    <img src="img/logo.jpg" alt="Logo de DuckSocial">
+  </header>
+
+  <main>
+    <section id="formulario">
+      <h2>Registro de Nuevo Usuario</h2>
+      <form name="nuevoUsuario" method="POST" action="php/ConexionCrearUsuario.php">
+        <label for="nickname">Nickname:</label><br>
+        <input type="text" id="nickname" name="nickname" pattern="[a-zA-Z0-9]+" placeholder="Ingrese su Nickname" required><br>
+        
+        <label for="contraseña">Contraseña:</label><br>
+        <input type="password" id="contraseña" name="contraseña" maxlength="20" autocomplete="new-password" placeholder="Ingrese su contraseña" required><br>
+        
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required><br>
+        
+        <label for="apellidos">Apellidos:</label><br>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" required><br>
+        
+        <label for="correo">Email:</label><br>
+        <input type="email" id="correo" name="correo" placeholder="Ingrese su email" required><br>
+        
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="18" placeholder="Ingrese su edad" required><br>
+        
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="descripcion" name="descripcion" maxlength="300" placeholder="Ingrese una descripción (máx. 300 caracteres)" required></textarea><br>
+        
+        <button type="submit" name="enviar" class="boton">Regístrate</button>
+        <button type="reset" class="boton">Borrar</button>
+      </form>
+    </section>
+
+    <section id="formulario2">
+      <h2>Iniciar Sesión</h2>
+      <form name="inicioSesion" method="POST" action="php/IniciarSesion.php">
+        <label for="login-nickname">Nickname:</label><br>
+        <input type="text" id="login-nickname" name="nickname" placeholder="Ingrese su Nickname" required><br>
+        
+        <label for="login-contraseña">Contraseña:</label><br>
+        <input type="password" id="login-contraseña" name="contraseña" autocomplete="off" placeholder="Ingrese su contraseña" required><br>
+        
+        <button type="submit" name="enviar" class="boton">Iniciar Sesión</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 DuckSocial</p>
+  </footer>
+</body>
+</html>
